@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 255 255 255;
+    --foreground: 20 44 4;
+    --primary: 20 44 4;
+    --primary-opacity: 0.8;
+    --secondary: 29 93 44;
+  }
+
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    margin: 0;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #fafafa;
+    background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23142c04' fill-opacity='0.03' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+    color: rgb(var(--foreground));
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    color: rgba(20, 44, 4, 0.9);
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  a {
+    color: rgba(20, 44, 4, 0.9);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  a:hover {
+    color: rgba(20, 44, 4, 0.7);
+    text-decoration: underline;
+  }
+
+  code {
+    font-family: 'Fira Code', 'Monaco', 'Courier New', monospace;
+  }
+}
+
+@layer components {
+  /* Component styles can be added here as needed */
+}
+
+/* Project layout utilities */
+.project-thumb {
+  width: 31.25%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+}
+
+.project-thumb.desktop {
+  height: 9em;
+  align-self: center;
+}
+
+.project-content {
+  width: 68.75%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 767px) {
+  .project-thumb {
+    width: 43.75% !important;
+    height: 50%;
+    align-self: center;
+  }
+
+  .project-content {
+    width: 56.25% !important;
+  }
+}
+
